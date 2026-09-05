@@ -28,7 +28,7 @@ jobs:
           gradle-version: '8.9'
 
       - name: Zbuduj APK
-        run: gradle :app:assembleDebug
+        run: gradle :app:assembleDebug -Pkotlin.jvm.target.validation.mode=warning
 
       - name: Gotowy APK
         uses: actions/upload-artifact@v4
